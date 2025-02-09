@@ -1,0 +1,33 @@
+.feRPG__document {
+
+    .tagify {
+        display: flex;
+        overflow: hidden;
+        background: var(--feRPG-color-card_light);
+        border-radius: var(--feRPG-tag-corner_radius);
+        border: none;
+        
+        min-height: calc(1em + 2*var(--feRPG-tag-border-size) + 2*var(--feRPG-size-tag_padding-h));
+        padding: var(--feRPG-taglist-padding-v) var(--feRPG-taglist-padding-h);
+        gap: var(--feRPG-taglist-padding-h);
+    }
+
+    .tagify__tag {
+
+        --tag-bg: var(--feRPG-color-tag_bg);
+        --tag-text-color: var(--feRPG-color-tag_text);
+        --tag-hover: var(--feRPG-color-tag_hover);
+        --tag-remove-btn-color: var(--tag-text-color);
+        --tag-remove-bg: var(--feRPG-color-tag_delete);
+
+        border: none;
+        border-radius: var(--feRPG-tag-corner_radius);
+        padding: var(--feRPG-tag-padding-v) var(--feRPG-tag-padding-h);
+        margin: 0;
+    }
+
+    .tagify__input {
+        padding: 0;
+        min-width: 1.5em;
+    }
+}

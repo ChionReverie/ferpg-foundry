@@ -1,0 +1,45 @@
+{
+  "id": "fireemblem",
+  "title": "Fire Emblem RPG",
+  "description": "Fire Emblem Tabletop Roleplaying Game by Dylan B.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "12",
+    "required": "12"
+  },
+  "authors": [
+    {
+      "name": "Chion Reverie"
+    }
+  ],
+  "esmodules": ["module/ferpg.mjs"],
+  "styles": ["styles/ferpg.css", "lib/tagify.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "unit": {}
+    },
+    "Item": {
+      "weapon": {
+        "htmlFields": ["description"]
+      }
+    }
+  },
+  "socket": false,
+  "initiative": "1d100",
+  "grid": {
+    "distance": 1,
+    "units": "Square"
+  },
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": null,
+  "url": null,
+  "manifest": null,
+  "download": null
+}

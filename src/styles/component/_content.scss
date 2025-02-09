@@ -1,0 +1,29 @@
+.feRPG__content {
+    & {
+        display: flex;
+        padding: var(--feRPG-size-content_padding);
+        gap: var(--feRPG-size-content_padding);
+    }
+
+    hr {
+        width: 100%;
+        margin: 0;
+    }
+    
+    input[type="text"], input[type="number"]
+    {
+        height: var(--feRPG-field-height);
+        border: none;
+        color: var(--feRPG-color-text);
+        background: var(--feRPG-color-card_editable);
+        border-radius: var(--feRPG-field-corner_radius);
+    }
+
+    select {
+        position: relative;
+        background: var(--feRPG-color-label_color2);
+        border-radius: 0;
+        border: none;
+        color: var(--feRPG-color-icon_bright);
+    }
+}

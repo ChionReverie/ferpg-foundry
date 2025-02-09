@@ -1,0 +1,32 @@
+{
+  "name": "foundry-fireemblem",
+  "version": "0.1.0",
+  "description": "Fire Emblem Tabletop RPG, adapted from rules by Dylan B.",
+  "type": "module",
+  "contributors": [
+    {
+      "name": "Chion Reverie"
+    },
+    {
+      "name": "Dylan B."
+    }
+  ],
+  "scripts": {
+    "clean": "tsx ./buildscripts/clean.ts",
+    "build": "npm run clean && tsx ./buildscripts/build.ts",
+    "build:lib": "tsx ./buildscripts/buildlibs.ts",
+    "build:watch": "npm run clean && tsx ./buildscripts/watch.ts",
+    "build:script": "npx tsc && npx tsc-alias"
+  },
+  "devDependencies": {
+    "@types/yaireo__tagify": "^4.27.0",
+    "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@yaireo/tagify": "^4.33.2",
+    "glob": "^11.0.1",
+    "sass": "^1.84.0"
+  }
+}

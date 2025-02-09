@@ -1,0 +1,66 @@
+{
+  "FERPG": {
+    "sheet.label": {
+      "weapon": "Weapon Sheet",
+      "unit": "Unit Sheet"
+    },
+    "sheet.weapon": {
+      "tab": {
+        "description": "Description",
+        "rules": "Rules"
+      },
+      "label": {
+        "summary": "Weapon Summary",
+        "category": "Category",
+        "rank": "Rank",
+        "uses": "Uses",
+        "value": "Value",
+        "range": "Range",
+        "might": "Might",
+        "weight": "Weight",
+        "hit": "Hit Rate",
+        "crit": "Crit Rate",
+        "wexp": "wEXP",
+        "effective_qualities": "Effective vs.",
+        "effects_text": "Effects"
+      }
+    },
+
+    "weaponCategory": {
+      "sword": "Sword",
+      "axe": "Axe",
+      "lance": "Lance",
+      "bow": "Bow",
+      "knife": "Knife",
+      "fire": "Fire",
+      "wind": "Wind",
+      "thunder": "Thunder",
+      "light": "Light",
+      "dark": "Dark",
+      "staff": "Staff",
+      "beast": "Beast",
+      "dragon": "Dragon",
+      "other": "Other"
+    },
+    "weaponRank": {
+      "e": "E",
+      "d": "D",
+      "c": "C",
+      "b": "B",
+      "a": "A",
+      "s": "S",
+      "ss": "SS"
+    },
+    "quality": {
+      "armored": "Armored",
+      "mounted": "Mounted",
+      "flying": "Flying",
+      "dragon": "Dragon",
+      "beast": "Beast",
+      "laguz": "Laguz",
+      "beorc": "Beorc",
+      "monster": "Monster",
+      "undead": "Undead"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@use 'variables';
+@use 'reset';
+@use 'component/itemheader';
+@use 'component/content';
+@use 'component/button';
+@use 'component/tags';
+@use 'component/prosemirror';
+
+.feRPG__document {
+    background:
+        url(/ui/parchment.jpg) repeat,
+        linear-gradient(var(--feRPG-color-card_bg), var(--feRPG-color-card_bg));
+    background-blend-mode: multiply;
+    color: var(--feRPG-color-text);
+}
+
+
+.feRPG__pane {
+    display: flex;
+    flex-direction: column;
+    gap: var(--feRPG-pane-content_gap);
+
+    /* An override because the active tab displays as block by default. */
+    &.tab[data-tab].active {
+        display: flex;
+    }
+
+    hr {
+        border-color: var(--feRPG-color-label_color2);
+    }
+
+    :first-child.feRPG__heading {
+        border-top-left-radius: var(--feRPG-pane-corner_radius);
+        border-top-right-radius: var(--feRPG-pane-corner_radius);
+    }
+
+    .feRPG__heading {
+        display: block;
+        width: 100%;
+        padding: 0 var(--feRPG-pane-inner-padding);
+
+        font: var(--feRPG-font-common-medium);
+        text-align: center;
+
+        color: var(--feRPG-color-card_light);
+        background: var(--feRPG-color-label_color3);
+    }
+}
+
+.feRPG__fieldrow {
+    & {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    label {
+        width: calc(96 * 1rem / 16);
+    }
+
+    input,
+    select,
+    tags {
+        flex: 1;
+    }
+}
+
+
+.feRPG__sheetnav {
+    display: flex;
+    gap: var(--feRPG-pane-content_gap);
+}
+
+.feRPG__lore {
+    color: var(--feRPG-color-lore);
+    background: var(--feRPG-color-lore_bg);
+}

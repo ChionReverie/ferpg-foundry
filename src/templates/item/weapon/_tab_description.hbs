@@ -1,0 +1,27 @@
+<section class="tab feRPG__pane" data-group="primary-tabs" data-tab="description">
+
+    <div class="feRPG__lore">
+        {{editor enrichedContent.description 
+            target="system.description" 
+            button=true owner=owner 
+            editable=editable 
+            engine="prosemirror"
+        }}
+    </div>
+    
+    <div class="feRPG__fieldrow">
+        <label for="system.effective_qualities">
+            {{localize "FERPG.sheet.weapon.label.effective_qualities"}}
+        </label>
+        <tagify-tags type="text" 
+            class="tags feRPG__tags" 
+            data-target="system.effective_qualities"
+        />
+    </div>
+    <div class="feRPG__fieldrow">
+        <label for="system.effets_text">
+            {{localize "FERPG.sheet.weapon.label.effects_text"}}
+        </label>
+        {{formInput systemFields.effects_text value=system.effects_text}}
+    </div>
+</section>

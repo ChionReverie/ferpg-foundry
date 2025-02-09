@@ -1,0 +1,39 @@
+.feRPG__itemheader {
+    & {
+        display: flex;
+        align-items: center;
+        gap: var(--feRPG-size-banner_gap);
+        
+        padding: var(--feRPG-size-banner_padding-v) var(--feRPG-size-banner_padding-h);
+        background: var(--feRPG-color-banner_common_bg);
+    
+        font: var(--feRPG-font-common-title);
+        color: var(--feRPG-color-banner_text);
+    }
+
+    h1 {
+        border: none;
+        color: inherit;
+        font: inherit;
+        margin: 0;
+    
+        width: initial;
+        min-width: 20px;
+    }
+
+    input {
+        /* Resets */
+        border: none;
+        color: inherit;
+        font: inherit;
+    }
+
+    hr {
+        display: inline-block;
+        flex: 1;
+    
+        margin: 0;
+        border: none;
+        border-bottom: 2px solid var(--feRPG-color-banner_text);
+    }
+}

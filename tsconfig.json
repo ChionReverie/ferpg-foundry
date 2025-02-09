@@ -1,0 +1,29 @@
+{
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"],
+    "files": [
+        "src/module/ferpg.mts"
+    ],
+    "compilerOptions": {
+        "baseUrl": "/systems/fireemblem/",
+        "paths": {
+            "@yaireo/tagify": ["lib/tagify.esm.js"]
+        },
+        "types": ["fvtt-types"],
+        "target": "ES6",
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "strict": true,
+        "rootDir": "src",
+        "outDir": "dist",
+        "skipLibCheck": true,
+        "sourceMap": true
+    },
+    "tsc-alias": {
+        "resolveFullPaths": true,
+        "fileExtensions": {
+            "inputGlob": "{js,jsx,mjs,esm.js}",
+            "outputCheck": ["js", "json", "jsx", "mjs", "esm.js"]
+          }
+    }
+}
