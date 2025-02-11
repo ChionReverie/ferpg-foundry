@@ -1,6 +1,6 @@
-<section class="tab feRPG__pane" data-group="primary-tabs" data-tab="description">
+<section class="tab feRPG-pane" data-group="primary-tabs" data-tab="description">
 
-    <div class="feRPG__lore">
+    <div class="feRPG-lore">
         {{editor enrichedContent.description 
             target="system.description" 
             button=true owner=owner 
@@ -9,17 +9,17 @@
         }}
     </div>
     
-    <div class="feRPG__fieldrow">
+    <div class="feRPG-fieldrow">
         <label for="system.effective_qualities">
             {{localize "FERPG.sheet.weapon.label.effective_qualities"}}
         </label>
         <tagify-tags type="text" 
-            class="tags feRPG__tags" 
+            class="tags feRPG-tags" 
             data-target="system.effective_qualities"
         />
     </div>
-    <div class="feRPG__fieldrow">
-        <label for="system.effets_text">
+    <div class="feRPG-fieldrow">
+        <label for="system.effects_text">
             {{localize "FERPG.sheet.weapon.label.effects_text"}}
         </label>
         {{formInput systemFields.effects_text value=system.effects_text}}

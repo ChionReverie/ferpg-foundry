@@ -1,88 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap");
 
 :root {
-    --feRPG-size-banner_padding-h: calc(25 * 1rem/16);
-    --feRPG-size-banner_padding-v: calc(8 * 1rem/16);
-    --feRPG-size-banner_gap: calc(10 * 1rem/16);
+  --feRPG-size-banner_padding-h: calc(10 * 1rem / 16);
+  --feRPG-size-banner_padding-v: calc(10 * 1rem / 16);
+  --feRPG-size-banner_gap: calc(10 * 1rem / 16);
 
-    --feRPG-size-content_padding: calc(10 * 1rem/16);
-    --feRPG-size-content_gap: calc(10 * 1rem/16);
+  --feRPG-size-content_padding: calc(10 * 1rem / 16);
 
-    --feRPG-size-button_padding-h: calc(10 * 1rem/16);
-    --feRPG-size-button_padding-v: calc(5 * 1rem/16);
+  --feRPG-size-button_padding-h: calc(10 * 1rem / 16);
+  --feRPG-size-button_padding-v: calc(5 * 1rem / 16);
 
-    --feRPG-size-content_gap: calc(10 * 1rem/16);
+  --feRPG-size-content_gap: calc(10 * 1rem / 16);
 
-    --feRPG-pane-corner_radius: calc(5 * 1rem/16);
-    --feRPG-pane-content_gap: calc(6 * 1rem/16);
-    --feRPG-pane-inner-padding: calc(6 * 1rem/16);
+  --feRPG-pane-corner_radius: calc(5 * 1rem / 16);
+  --feRPG-pane-content_gap: calc(6 * 1rem / 16);
+  --feRPG-pane-inner-padding: calc(6 * 1rem / 16);
 
-    --feRPG-field-corner_radius: calc(5 * 1rem/16);
-    --feRPG-field-height: calc(24 * 1rem / 16); 
+  --feRPG-field-corner_radius: calc(5 * 1rem / 16);
+  --feRPG-field-height: calc(24 * 1rem / 16);
 
-    --feRPG-prosemirror-height: calc(10rem);
-    --feRPG-prosemirror-height_noeditor: calc(2rem);
-    --feRPG-prosemirror-editor_padding-h: calc(4 * 1rem/16);
-    --feRPG-prosemirror-editor_padding-v: calc(2 * 1rem/16); 
+  --feRPG-prosemirror-height: calc(10rem);
+  --feRPG-prosemirror-height_noeditor: calc(2rem);
+  --feRPG-prosemirror-editor_padding-h: calc(4 * 1rem / 16);
+  --feRPG-prosemirror-editor_padding-v: calc(2 * 1rem / 16);
 
-    --feRPG-tag-padding-h: calc(5 * 1rem/16);
-    --feRPG-tag-padding-v: calc(1 * 1rem/16);
-    --feRPG-tag-corner_radius: calc(3 * 1rem/16);
-    --feRPG-tag-border-size: calc(1 * 1rem/16);
-    --feRPG-taglist-padding-h: calc(2 * 1rem/16);
-    --feRPG-taglist-padding-v: calc(2 * 1rem/16);
+  --feRPG-tag-padding-h: calc(5 * 1rem / 16);
+  --feRPG-tag-padding-v: calc(1 * 1rem / 16);
+  --feRPG-tag-corner_radius: calc(3 * 1rem / 16);
+  --feRPG-tag-border-size: calc(1 * 1rem / 16);
+  --feRPG-taglist-padding-h: calc(2 * 1rem / 16);
+  --feRPG-taglist-padding-v: calc(2 * 1rem / 16);
 
-    --feRPG-color-text: #1C1A14;
-    --feRPG-color-lore: #48423E;
-    --feRPG-color-lore_bg: #EED7A4;
+  --feRPG-color-text: #1c1a14;
+  --feRPG-color-lore: #48423e;
+  --feRPG-color-lore_bg: #eed7a4;
 
-    --feRPG-color-banner_text: #FEEEBC;
-    --feRPG-color-banner_character_bg: linear-gradient(transparent, #0004), #02162E;
-    --feRPG-color-banner_common_bg: linear-gradient(transparent, #0004), #0F2C11;
+  --feRPG-color-banner_text: #feeebc;
+  --feRPG-color-banner_character_bg: linear-gradient(transparent, #0004),
+    #02162e;
+  --feRPG-color-banner_common_bg: linear-gradient(transparent, #0004), #0f2c11;
 
-    --feRPG-color-card_bg: #CCA553;
-    --feRPG-color-card_light: #EED7A4;
-    --feRPG-color-card_editable: #E9E8DC;
+  --feRPG-color-card_bg: #cca553;
+  --feRPG-color-card_light: #eed7a4;
+  --feRPG-color-card_editable: #e9e8dc;
 
-    --feRPG-color-icon_bright: #EAE6E5;
-    --feRPG-color-icon_bg: #2F2004;
+  --feRPG-color-icon_bright: #eae6e5;
+  --feRPG-color-icon_bg: #2f2004;
 
-    --feRPG-color-tag_bg: #2F2004;
-    --feRPG-color-tag_text: #EAE6E5;
-    --feRPG-color-tag_hover: #1b1b1b;
-    --feRPG-color-tag_delete: #380808;
+  --feRPG-color-tag_bg: #2f2004;
+  --feRPG-color-tag_text: #eae6e5;
+  --feRPG-color-tag_hover: #1b1b1b;
+  --feRPG-color-tag_delete: #380808;
 
-    --feRPG-color-progress_exp: #2D2A20;
-    --feRPG-color-progress_health: #B6D046;
-    --feRPG-color-progress_health_empty: #D1B479;
+  --feRPG-color-progress_exp: #2d2a20;
+  --feRPG-color-progress_exp_empty: #d1b479;
+  --feRPG-color-progress_health: #b6d046;
+  --feRPG-color-progress_health_empty: #d1b479;
 
-    --feRPG-color-gold_text: #EAA828;
-    --feRPG-color-gold_dark: #EED7A4;
+  --feRPG-color-gold_text: #eaa828;
+  --feRPG-color-gold_dark: #0e0e0e;
 
-    --feRPG-color-label_value_bg: #EED7A4;
-    --feRPG-color-label_value_bg: #2D2A20;
-    --feRPG-color-label_color1: #7F5119;
-    --feRPG-color-label_color2: #402C0E;
-    --feRPG-color-label_color3: #2F2004;
+  --feRPG-color-label_value_bg: #eed7a4;
+  --feRPG-color-label_value_text: #2d2a20;
+  --feRPG-color-label_color1: #7f5119;
+  --feRPG-color-label_color2: #402c0e;
+  --feRPG-color-label_color3: #2f2004;
 
-    --feRPG-color-nav_bar_text: #C7BEBE;
-    --feRPG-color-nav_bar_bg: #100E10;
-    --feRPG-color-nav_button-outer: #D9D9D9;
-    --feRPG-color-nav_button-outer_checked: #EAA828;
-    --feRPG-color-nav_button-inner: #161514;
-    --feRPG-color-nav_button-inner_checked: #2D2A20;
+  --feRPG-color-nav_bar_text: #c7bebe;
+  --feRPG-color-nav_bar_bg: #100e10;
+  --feRPG-color-nav_button-outer: #d9d9d9;
+  --feRPG-color-nav_button-outer_checked: #eaa828;
+  --feRPG-color-nav_button-inner: #161514;
+  --feRPG-color-nav_button-inner_checked: #2d2a20;
 
-    --feRPG-color-bonus_positive_bg: #3A495A;
-    --feRPG-color-bonus_positive_text: #FFFFFF;
-    --feRPG-color-bonus_negative_bg: #863521;
-    --feRPG-color-bonus_negative_text: #FFFFFF;
+  --feRPG-color-bonus_positive_bg: #3a495a;
+  --feRPG-color-bonus_positive_text: #ffffff;
+  --feRPG-color-bonus_negative_bg: #863521;
+  --feRPG-color-bonus_negative_text: #ffffff;
 
-    --feRPG-font-common-small: calc(14 * 1rem/16) "Chivo", sans-serif;
-    --feRPG-font-common-medium: calc(16 * 1rem/16) "Chivo", sans-serif;
-    --feRPG-font-common-large: calc(24 * 1rem/16) "Chivo", sans-serif;
-    --feRPG-font-common-title: calc(32 * 1rem/16) "Chivo", sans-serif;
+  --feRPG-font-common-small: calc(14 * 1rem / 16) "Chivo", sans-serif;
+  --feRPG-font-common-medium: calc(16 * 1rem / 16) "Chivo", sans-serif;
+  --feRPG-font-common-large: calc(24 * 1rem / 16) "Chivo", sans-serif;
+  --feRPG-font-common-title: calc(32 * 1rem / 16) "Chivo", sans-serif;
 
-    --feRPG-font-numbers-small: calc(12 * 1rem/16) "Rowdies", sans-serif;
-    --feRPG-font-numbers-medium: calc(16 * 1rem/16) "Rowdies", sans-serif;
-    --feRPG-font-numbers-large: calc(24 * 1rem/16) "Rowdies", sans-serif;
+  --feRPG-font-numbers-small: calc(12 * 1rem / 16) "Rowdies", sans-serif;
+  --feRPG-font-numbers-medium: calc(16 * 1rem / 16) "Rowdies", sans-serif;
+  --feRPG-font-numbers-large: calc(24 * 1rem / 16) "Rowdies", sans-serif;
+
+  --feRPG-flex-gap: var(--feRPG-size-content_gap);
 }

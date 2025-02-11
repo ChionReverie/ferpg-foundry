@@ -1,0 +1,79 @@
+.feRPG-hpbar {
+  & {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--feRPG-color-label_color2);
+    border-radius: var(--feRPG-pane-corner_radius);
+    overflow: hidden;
+  }
+  .feRPG-hpbar__container {
+    position: relative;
+    border-top-left-radius: var(--feRPG-pane-corner_radius);
+    border-bottom-left-radius: var(--feRPG-pane-corner_radius);
+    overflow: hidden;
+    background-color: var(--feRPG-color-card_light);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: calc(5 * 1rem / 16);
+  }
+  .feRPG-meter {
+    flex: 1;
+    overflow: hidden;
+    border-radius: var(--feRPG-pane-corner_radius);
+    background: var(--feRPG-color-progress_health_empty);
+  }
+  .feRPG-meter__bar {
+    background: var(--feRPG-color-progress_health);
+  }
+  .feRPG-meter__label {
+    position: relative;
+    font: var(--feRPG-font-numbers-medium);
+    flex: 0 2.5rem;
+
+    text-align: center;
+    align-content: center;
+    color: var(--feRPG-color-gold_text);
+    z-index: 1;
+
+    &::after {
+      // This forces the stroke to appear at the same position as its parent.
+      position: absolute;
+      left: 0;
+
+      width: 100%;
+
+      content: attr(data-text);
+      -webkit-text-stroke: 3px var(--feRPG-color-gold_dark);
+      z-index: -1;
+    }
+  }
+}
+
+.feRPG-hpbar__fields {
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+  // Magic trick to center content vertically
+  height: 0px;
+  top: 50%;
+  align-items: center;
+  height: 0;
+
+  display: flex;
+  flex-direction: row;
+  color: var(--feRPG-color-label_color2);
+  font: var(--feRPG-font-numbers-medium);
+  
+  .feRPG-hpbar__field__current {
+    flex: 1.3;
+    text-align: right;
+    font: var(--feRPG-font-numbers-large);
+  }
+  .feRPG-hpbar__field__max {
+    flex: 1;
+    text-align: left;
+    font: var(--feRPG-font-numbers-medium);
+  }
+}

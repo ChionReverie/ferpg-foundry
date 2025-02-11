@@ -26,37 +26,16 @@ function maybe_terminate() {
   }
 }
 
-fs.watch(dirs.systemJSON.src, (eventType, fileName) => {
-  console.log(`System configuration edited at ${fileName}`);
-  try {
-    operations.copyJSON();
-    console.log(`Configs have successfully been replaced.`);
-  } catch (e) {
-    console.error("Failed to replace configs.");
-    console.error(e);
-    maybe_terminate();
-  }
-});
+// Note: Not watching libs folder
 
-fs.watch(dirs.lang.src, { recursive: true }, (eventType, fileName) => {
-  console.log(`Language configuration edited at ${fileName}`);
-  try {
-    operations.copyLanguageFiles();
-    console.log("Language files have successfully been replaced.");
-  } catch (e) {
-    console.error("Failed to replace language files.");
-    console.error(e);
-    maybe_terminate();
-  }
-});
+fs.watch(dirs.public.src, { recursive: true }, (eventType, fileName) => {
+  console.log(`Public file edited at ${fileName}`);
 
-fs.watch(dirs.template.src, { recursive: true }, (eventType, fileName) => {
-  console.log(`Tempalate edited at ${fileName}`);
   try {
-    operations.copyTemplates();
-    console.log("Templates have successfully been replaced.");
+    operations.copyPublic();
+    console.log("Public files have successfully been copied over.");
   } catch (e) {
-    console.error("Failed to replace templates.");
+    console.error("Failed to copy over public files.");
     console.error(e);
     maybe_terminate();
   }

@@ -1,29 +1,28 @@
-type ActorSheetContext = {}
+import { UnitActor } from "./document.mjs";
 
-interface UnitDataSource {
-    type: 'unit';
-    data: ''
-}
+export class UnitSheet extends ActorSheet {
+  static get defaultOptions() {
+    return foundry.utils.mergeObject(ActorSheet.defaultOptions, {
+      classes: ["feRPG", "sheet", "unit"],
+      template: "systems/fireemblem/templates/actor/unit/sheet.hbs",
+      width: 500,
+      height: 600,
+    });
+  }
 
-export class UnitActorSheet extends ActorSheet {
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(ActorSheet.defaultOptions, {
-            classes: ['feRPG', 'sheet', 'actor'],
-            template: 'systems/fireemblem/templates/actor/actor-sheet.hbs',
-            width: 600,
-            height: 600,
-        });
-    }
+  override async getData(options: any) {
+    const data = await super.getData(options);
 
-    getData(options: any) {
-        const data = super.getData(options);
+    const actor = this.actor as UnitActor;
 
-        // const context = {
-        //     ...data
-        // }
-        // const actorData = context.data;
-        // context.system = actorData.system;
-        
-        return data;
-    }
+    const extendedContext = {
+      ...data,
+      document: this.document,
+      fields: actor.schema.fields,
+      system: actor.system,
+      systemFields: actor.system.schema.fields,
+    };
+
+    return extendedContext;
+  }
 }

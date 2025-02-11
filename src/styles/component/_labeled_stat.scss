@@ -1,0 +1,54 @@
+.feRPG-labeled_stat {
+    height: var(--_labeled_stat-height);
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--_labeled_stat-main_bg);
+}
+
+.feRPG-labeled_stat--size_medium {
+    --_labeled_stat-label_font: var(--feRPG-font-common-medium);
+    --_labeled_stat-field_font: var(--feRPG-font-numbers-medium);
+    --_labeled_stat-height: 2rem;
+    --_labeled_stat-field_width: 2.5rem;
+}
+.feRPG-labeled_stat--size_large {
+    --_labeled_stat-label_font: var(--feRPG-font-common-large);
+    --_labeled_stat-field_font: var(--feRPG-font-numbers-large);
+    --_labeled_stat-height: 2.5rem;
+    --_labeled_stat-field_width: 4rem;
+}
+
+.feRPG-labeled_stat--flavor_light {
+    --_labeled_stat-main_bg: var(--feRPG-color-label_color1);
+    --_labeled_stat-field_bg: var(--feRPG-color-card_light);
+    --_labeled_stat-field_color: var(--feRPG-color-label_value_text);
+}
+.feRPG-labeled_stat--flavor_medium {
+    --_labeled_stat-main_bg: var(--feRPG-color-label_color2);
+    --_labeled_stat-field_bg: var(--feRPG-color-card_light);
+    --_labeled_stat-field_color: var(--feRPG-color-label_color2);
+}
+.feRPG-labeled_stat--flavor_dark {
+    --_labeled_stat-main_bg: var(--feRPG-color-label_color3);
+    --_labeled_stat-field_bg: var(--feRPG-color-card_light);
+    --_labeled_stat-field_color: var(--feRPG-color-label_color3);
+}
+
+.feRPG-labeled_stat__label  {
+    font: var(--_labeled_stat-label_font);
+    flex: 1;
+    text-align: center;
+    align-content: space-around;
+
+    text-shadow: 1px 1.5px 0.5px black;
+}
+.feRPG-labeled_stat__field  {
+    font: var(--_labeled_stat-field_font);
+    text-align: center;
+    align-content: space-around;
+
+    width: var(--_labeled_stat-field_width);
+    background: var(--_labeled_stat-field_bg);
+    color: var(--_labeled_stat-field_color);
+}

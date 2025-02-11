@@ -25,6 +25,15 @@
         "effects_text": "Effects"
       }
     },
+    "sheet.unit": {
+      "label": {
+        "exp": "EXP",
+        "hp": "HP",
+        "move": "Mov",
+        "constitution": "Con",
+        "sight": "LoS"
+      }
+    },
 
     "weaponCategory": {
       "sword": "Sword",

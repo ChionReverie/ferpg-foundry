@@ -1,0 +1,16 @@
+{{!-- 
+Required fields:
+    'size': 'medium' | 'large'
+    'flavor': 'light' | 'dark' | 'medium'
+    'label': string
+    'value': number
+--}}
+<div class="feRPG-labeled_stat 
+    feRPG-labeled_stat--size_{{ifThen size size "medium"}}
+    feRPG-labeled_stat--flavor_{{ifThen flavor flavor "light"}}
+    {{class}}" 
+    style="{{style}}"
+>
+    <div class="feRPG-labeled_stat__label">{{label}}</div>
+    <div class="feRPG-labeled_stat__field">{{value}}</div>
+</div>

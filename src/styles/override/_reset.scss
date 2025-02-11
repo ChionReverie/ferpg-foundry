@@ -1,0 +1,16 @@
+.feRPG.sheet.weapon, .feRPG.sheet.unit {
+    .window-content {
+        /* Overrides */
+        padding: 0;
+    }
+}
+
+.feRPG__document {
+    input {
+        // Resets
+        font: inherit;
+        color: inherit;
+        border: none;
+        padding: 0;
+    }
+}

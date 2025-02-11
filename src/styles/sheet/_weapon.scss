@@ -1,0 +1,10 @@
+.feRPG-weapon_sheet {
+    display: flex;
+    flex-direction: row;
+}
+.feRPG-weapon_sheet__sidebar {
+    flex: 0 170px;
+}
+.feRPG-weapon_sheet__main {
+    flex: 1;
+}

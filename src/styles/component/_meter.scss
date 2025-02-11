@@ -1,0 +1,11 @@
+.feRPG-meter {
+  position: relative;
+}
+.feRPG-meter__bar {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  min-width: 0%;
+  width: calc(100% * min(1, var(--feRPG-meter-value) / var(--feRPG-meter-max)));
+  max-width: 100%;
+}

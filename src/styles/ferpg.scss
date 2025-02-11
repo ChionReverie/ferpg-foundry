@@ -1,77 +1,115 @@
-@use 'variables';
-@use 'reset';
-@use 'component/itemheader';
-@use 'component/content';
-@use 'component/button';
-@use 'component/tags';
-@use 'component/prosemirror';
+@use "variables";
 
-.feRPG__document {
-    background:
-        url(/ui/parchment.jpg) repeat,
-        linear-gradient(var(--feRPG-color-card_bg), var(--feRPG-color-card_bg));
-    background-blend-mode: multiply;
-    color: var(--feRPG-color-text);
+@use "override/reset";
+@use "override/tags";
+@use "override/prosemirror";
+
+@use "section/unitheader";
+@use "section/itemheader";
+@use "section/content";
+
+@use "component/button";
+@use "component/meter";
+@use "component/hpbar";
+@use "component/xpbar";
+@use "component/labeled_stat";
+
+@use "sheet/weapon";
+
+.feRPG-document {
+  background: url(/ui/parchment.jpg) repeat,
+    linear-gradient(var(--feRPG-color-card_bg), var(--feRPG-color-card_bg));
+  background-blend-mode: multiply;
+  color: var(--feRPG-color-text);
 }
 
+.feRPG-pane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--feRPG-pane-content_gap);
 
-.feRPG__pane {
+  /* An override because the active tab displays as block by default. */
+  &.tab[data-tab].active {
     display: flex;
-    flex-direction: column;
-    gap: var(--feRPG-pane-content_gap);
+  }
 
-    /* An override because the active tab displays as block by default. */
-    &.tab[data-tab].active {
-        display: flex;
-    }
+  hr {
+    border-color: var(--feRPG-color-label_color2);
+  }
 
-    hr {
-        border-color: var(--feRPG-color-label_color2);
-    }
+  :first-child.feRPG-heading {
+    border-top-left-radius: var(--feRPG-pane-corner_radius);
+    border-top-right-radius: var(--feRPG-pane-corner_radius);
+  }
 
-    :first-child.feRPG__heading {
-        border-top-left-radius: var(--feRPG-pane-corner_radius);
-        border-top-right-radius: var(--feRPG-pane-corner_radius);
-    }
+  .feRPG-heading {
+    display: block;
+    width: 100%;
+    padding: 0 var(--feRPG-pane-inner-padding);
 
-    .feRPG__heading {
-        display: block;
-        width: 100%;
-        padding: 0 var(--feRPG-pane-inner-padding);
+    font: var(--feRPG-font-common-medium);
+    text-align: center;
 
-        font: var(--feRPG-font-common-medium);
-        text-align: center;
-
-        color: var(--feRPG-color-card_light);
-        background: var(--feRPG-color-label_color3);
-    }
+    color: var(--feRPG-color-card_light);
+    background: var(--feRPG-color-label_color3);
+  }
 }
 
-.feRPG__fieldrow {
-    & {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    label {
-        width: calc(96 * 1rem / 16);
-    }
-
-    input,
-    select,
-    tags {
-        flex: 1;
-    }
-}
-
-
-.feRPG__sheetnav {
+.feRPG-fieldrow {
+  & {
     display: flex;
-    gap: var(--feRPG-pane-content_gap);
+    align-items: center;
+    flex-direction: row;
+  }
+
+  label {
+    width: calc(96 * 1rem / 16);
+  }
+
+  input,
+  select,
+  tags {
+    flex: 1;
+  }
 }
 
-.feRPG__lore {
-    color: var(--feRPG-color-lore);
-    background: var(--feRPG-color-lore_bg);
+.feRPG-sheetnav {
+  display: flex;
+  gap: var(--feRPG-pane-content_gap);
+}
+
+.feRPG-lore {
+  color: var(--feRPG-color-lore);
+  background: var(--feRPG-color-lore_bg);
+}
+
+.feRPG-column,
+.feRPG-row {
+  display: flex;
+  gap: var(--feRPG-flex-gap);
+}
+
+.feRPG-column {
+  flex-direction: column;
+}
+.feRPG-row {
+  flex-direction: row;
+}
+
+.feRPG-flexfill {
+  flex: 1;
+}
+
+.feRPG-decorator {
+  background-color: black;
+  mask-size: 100% 100%;
+}
+.feRPG-decorator--triangle_left {
+  mask-image: url("/systems/fireemblem/assets/triangle_left.svg");
+}
+.feRPG-decorator--triangle_right {
+  mask-image: url("/systems/fireemblem/assets/triangle_right.svg");
+}
+.feRPG-decorator--sloped_right {
+  mask-image: url("/systems/fireemblem/assets/sloped_right.svg");
 }

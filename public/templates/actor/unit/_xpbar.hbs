@@ -1,0 +1,18 @@
+<div class="feRPG-xpbar {{class}}" style="{{style}}">
+  <div class="feRPG-decorator feRPG-decorator--triangle_left"></div>
+  <div class="feRPG-xpbar__content">
+    <div class="feRPG-xpbar__label">
+      {{localize "FERPG.sheet.unit.label.exp"}}
+    </div>
+    <div class="feRPG-xpbar__value">
+      <div class="feRPG-decorator feRPG-decorator--triangle_left"></div>
+      {{formInput systemFields.exp.fields.value value=system.exp.value localize=false}}
+      <div class="feRPG-decorator feRPG-decorator--sloped_right"></div>
+    </div>
+    {{> "systems/fireemblem/templates/components/_meter.hbs"
+      value=system.exp.value
+      max=system.exp.max
+    }}
+  </div>
+  <div class="feRPG-decorator feRPG-decorator--triangle_right"></div>
+</div>

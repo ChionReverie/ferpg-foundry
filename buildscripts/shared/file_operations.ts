@@ -21,24 +21,14 @@ const EXTENSION_DEST_STYLESHEET = ".css";
 const EXTENSION_DEST_STYLESHEET_MAPS = ".css.map";
 
 export function fullBuild() {
-  copyJSON();
-  copyLanguageFiles();
-  copyTemplates();
   copyLibs();
+  copyPublic();
   transpileStyles();
   compileScripts();
 }
 
-export function copyJSON() {
-  fs.cpSync(dirs.systemJSON.src, dirs.systemJSON.dest);
-}
-
-export function copyLanguageFiles() {
-  fs.cpSync(dirs.lang.src, dirs.lang.dest, { recursive: true });
-}
-
-export function copyTemplates() {
-  fs.cpSync(dirs.template.src, dirs.template.dest, { recursive: true });
+export function copyPublic() {
+  fs.cpSync(dirs.public.src, dirs.public.dest, { recursive: true });
 }
 
 export function transpileStyles() {

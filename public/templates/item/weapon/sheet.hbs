@@ -1,11 +1,11 @@
-<form class="{{cssClass}} feRPG__document" autocomplete="off">
-    {{> "systems/fireemblem/templates/parts/_item_header.hbs"}}
-    <section class="feRPG__content">
-        <section style="width: 170px">
+<form class="{{cssClass}} feRPG-document" autocomplete="off">
+    {{> "systems/fireemblem/templates/components/_item_header.hbs"}}
+    <section class="feRPG-content feRPG-weapon_sheet__content">
+        <section class="feRPG-weapon_sheet__sidebar">
             {{> "systems/fireemblem/templates/item/weapon/_summary.hbs"}}
         </section>
 
-        <section class="feRPG__pane" style="flex: 1">
+        <section class="feRPG-weapon_sheet__main feRPG-pane">
             {{> "systems/fireemblem/templates/item/weapon/_tablist.hbs"}}
             {{> "systems/fireemblem/templates/item/weapon/_tab_description.hbs"}}
         </section>

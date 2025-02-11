@@ -39,6 +39,11 @@ export interface WeaponData {
   effective_qualities: string[];
   effect_text: string;
 
+  xp: {
+    current: number;
+    max: number;
+  };
+
   description: string;
 }
 

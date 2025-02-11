@@ -1,15 +1,8 @@
 import Tagify from "@yaireo/tagify";
 
-import { FireEmblemItem } from "../document.mjs";
-import { WeaponData } from "./data.mjs";
+import { WeaponItem } from "./document.mjs";
 
-export class WeaponItem extends FireEmblemItem {
-  system!: WeaponData;
-}
-
-export class WeaponItemSheet extends ItemSheet<
-  DocumentSheetOptions<FireEmblemItem>
-> {
+export class WeaponSheet extends ItemSheet<DocumentSheetOptions<WeaponItem>> {
   tagify?: Tagify;
   skipTagifyChangeEvent = false;
 
@@ -21,9 +14,9 @@ export class WeaponItemSheet extends ItemSheet<
       height: 400,
       tabs: [
         {
-          navSelector: "nav.feRPG__sheetnav",
+          navSelector: "nav.feRPG-sheetnav",
           initial: "description",
-          contentSelector: ".feRPG__document",
+          contentSelector: ".feRPG-document",
         },
       ],
     });
@@ -52,7 +45,7 @@ export class WeaponItemSheet extends ItemSheet<
     super.activateListeners(html);
 
     const selector =
-      'tagify-tags.feRPG__tags[data-target="system.effective_qualities"]';
+      'tagify-tags.feRPG-tags[data-target="system.effective_qualities"]';
     const inputElement = html.find(selector);
 
     if (inputElement.length < 1) {
@@ -72,7 +65,7 @@ export class WeaponItemSheet extends ItemSheet<
     );
 
     const my_tagify = new Tagify(element as HTMLInputElement, {
-      tagTextProp: 'name',
+      tagTextProp: "name",
       whitelist,
       enforceWhitelist: true,
     });
@@ -85,10 +78,14 @@ export class WeaponItemSheet extends ItemSheet<
      */
     this.skipTagifyChangeEvent = true;
 
-    my_tagify.on("change", this._onTagsChanged);
+    my_tagify.on("change", (event) => {
+      this._onTagsChanged(event);
+    });
   }
 
-  _onTagsChanged(event: CustomEvent<Tagify.ChangeEventData<{name: string, value: string}>>) {
+  _onTagsChanged(
+    event: CustomEvent<Tagify.ChangeEventData<{ name: string; value: string }>>
+  ) {
     if (this.skipTagifyChangeEvent) {
       this.skipTagifyChangeEvent = false;
       return;
@@ -99,12 +96,16 @@ export class WeaponItemSheet extends ItemSheet<
       tagIDs.push(tag.value);
     }
 
-    const target = event.detail.tagify.DOM.originalInput.getAttribute("data-target");
-    if(!target) {
-      console.error("No `data-target` attribute found on DOM for tagify element", event.detail.tagify.DOM.originalInput);
+    const target =
+      event.detail.tagify.DOM.originalInput.getAttribute("data-target");
+    if (!target) {
+      console.error(
+        "No `data-target` attribute found on DOM for tagify element",
+        event.detail.tagify.DOM.originalInput
+      );
       return;
     }
-    
-    this.object.update({[target!]:tagIDs});
+
+    this.item.update({ [target!]: tagIDs });
   }
 }

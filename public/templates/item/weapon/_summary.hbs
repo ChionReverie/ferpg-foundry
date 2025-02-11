@@ -1,0 +1,79 @@
+<section
+  class="feRPG-pane tab"
+  data-group="primary-tabs"
+  data-tab="description"
+>
+  <span class="feRPG-heading">
+    {{localize "FERPG.sheet.weapon.label.summary"}}
+  </span>
+
+  <div class="feRPG-fieldrow">
+    <label for="system.category">
+      {{localize "FERPG.sheet.weapon.label.category"}}
+    </label>
+    {{formInput systemFields.category value=system.category localize=true}}
+  </div>
+  <div class="feRPG-fieldrow">
+    <label for="system.rank">
+      {{localize "FERPG.sheet.weapon.label.rank"}}
+    </label>
+    {{formInput systemFields.rank value=system.rank localize=true}}
+  </div>
+  <div class="feRPG-fieldrow">
+    <label for="system.uses.remaining">
+      {{localize "FERPG.sheet.weapon.label.uses"}}
+    </label>
+    {{formInput systemFields.uses.fields.remaining value=system.uses.remaining}}
+    <span>/</span>
+    {{formInput systemFields.uses.fields.max value=system.uses.max}}
+  </div>
+
+  <div class="feRPG-fieldrow">
+    <label for="system.value">
+      {{localize "FERPG.sheet.weapon.label.value"}}
+    </label>
+    {{formInput systemFields.value value=system.value}}
+  </div>
+  <hr />
+
+  <div class="feRPG-fieldrow">
+    <label for="system.range">
+      {{localize "FERPG.sheet.weapon.label.range"}}
+    </label>
+    {{formInput systemFields.range value=system.range}}
+  </div>
+  <div class="feRPG-fieldrow">
+    <label for="system.might">
+      {{localize "FERPG.sheet.weapon.label.might"}}
+    </label>
+    {{formInput systemFields.might value=system.might}}
+  </div>
+
+  <div class="feRPG-fieldrow">
+    <label for="system.weight">
+      {{localize "FERPG.sheet.weapon.label.weight"}}
+    </label>
+    {{formInput systemFields.weight value=system.weight}}
+  </div>
+  <div class="feRPG-fieldrow">
+    <label for="system.hit">
+      {{localize "FERPG.sheet.weapon.label.hit"}}
+    </label>
+    {{formInput systemFields.hit value=system.hit}}
+  </div>
+  <div class="feRPG-fieldrow">
+    <label for="system.crit">
+      {{localize "FERPG.sheet.weapon.label.crit"}}
+    </label>
+    {{formInput systemFields.crit value=system.crit}}
+  </div>
+
+  <hr />
+
+  <div class="feRPG-fieldrow">
+    <label for="system.wexp">
+      {{localize "FERPG.sheet.weapon.label.wexp"}}
+    </label>
+    {{formInput systemFields.wexp value=system.wexp}}
+  </div>
+</section>

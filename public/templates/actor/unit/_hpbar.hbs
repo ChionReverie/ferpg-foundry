@@ -1,0 +1,35 @@
+<div class="feRPG-hpbar {{class}}" style="{{style}}">
+  <div
+    data-text="{{localize 'FERPG.sheet.unit.label.hp'}}"
+    class="feRPG-meter__label"
+  >
+    {{localize "FERPG.sheet.unit.label.hp"}}
+  </div>
+  <div class="feRPG-hpbar__container">
+    {{> "systems/fireemblem/templates/components/_meter.hbs"
+      value=system.combat.health.value
+      max=system.combat.health.max
+    }}
+
+    <div class="feRPG-hpbar__fields">
+      <input
+        class="feRPG-hpbar__field feRPG-hpbar__field__current"
+        type="number"
+        step="1"
+        min="{{systemFields.combat.fields.health.fields.value.min}}"
+        max="{{system.combat.health.max}}"
+        value="{{system.combat.health.value}}"
+        name="system.combat.health.value"
+      />
+      <span>/</span>
+      <input
+        class="feRPG-hpbar__field feRPG-hpbar__field__max"
+        type="number"
+        step="1"
+        min="{{systemFields.combat.fields.health.fields.max.min}}"
+        value="{{system.combat.health.max}}"
+        name="system.combat.health.max"
+      />
+    </div>
+  </div>
+</div>

@@ -2,8 +2,8 @@ import { FireEmblemActor } from "./actor/document.mjs";
 import { FireEmblemItem } from "./item/document.mjs";
 import { UnitModel } from "./actor/unit/data.mjs";
 
-import { UnitActorSheet } from "./actor/unit/sheet.mjs";
-import { WeaponItemSheet } from "./item/weapon/sheet.mjs";
+import { UnitSheet } from "./actor/unit/sheet.mjs";
+import { WeaponSheet } from "./item/weapon/sheet.mjs";
 import { FERPG } from "./config.mjs";
 import { WeaponModel } from "./item/weapon/data.mjs";
 
@@ -20,16 +20,21 @@ Hooks.once("init", () => {
   };
 
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("fireemblem", UnitActorSheet, {
+  Actors.registerSheet("fireemblem", UnitSheet, {
     label: "FERPG.sheet.label.unit",
   });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("fireemblem", WeaponItemSheet, {
+  Items.registerSheet("fireemblem", WeaponSheet, {
     label: "FERPG.sheet.label.weapon",
   });
 
   const templatePaths = [
-    "systems/fireemblem/templates/parts/_item_header.hbs",
+    "systems/fireemblem/templates/components/_meter.hbs",
+    "systems/fireemblem/templates/components/_item_header.hbs",
+    "systems/fireemblem/templates/components/_labeled_stat.hbs",
+    "systems/fireemblem/templates/actor/unit/_header.hbs",
+    "systems/fireemblem/templates/actor/unit/_xpbar.hbs",
+    "systems/fireemblem/templates/actor/unit/_hpbar.hbs",
     "systems/fireemblem/templates/item/weapon/_summary.hbs",
     "systems/fireemblem/templates/item/weapon/_tablist.hbs",
     "systems/fireemblem/templates/item/weapon/_tab_description.hbs",

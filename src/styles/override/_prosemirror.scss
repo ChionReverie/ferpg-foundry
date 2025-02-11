@@ -1,0 +1,14 @@
+.feRPG-document {
+  // Prosemirror
+  .editor.prosemirror {
+    min-height: var(--feRPG-prosemirror-height);
+  }
+  .editor-content {
+    padding: var(--feRPG-prosemirror-editor_padding-v)
+      var(--feRPG-prosemirror-editor_padding-h);
+  }
+
+  .editor:not(.prosemirror) {
+    min-height: var(--feRPG-prosemirror-height_noeditor);
+  }
+}
