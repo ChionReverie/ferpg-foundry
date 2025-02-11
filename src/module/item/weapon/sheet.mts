@@ -1,6 +1,7 @@
 import Tagify from "@yaireo/tagify";
 
 import { WeaponItem } from "./document.mjs";
+import { FERPG } from "../../config.mjs";
 
 export class WeaponSheet extends ItemSheet<DocumentSheetOptions<WeaponItem>> {
   tagify?: Tagify;
@@ -9,7 +10,7 @@ export class WeaponSheet extends ItemSheet<DocumentSheetOptions<WeaponItem>> {
   static get defaultOptions() {
     return foundry.utils.mergeObject(ItemSheet.defaultOptions, {
       classes: ["feRPG", "sheet", "weapon", "item"],
-      template: "systems/fireemblem/templates/item/weapon/sheet.hbs",
+      template: FERPG.templates.sheets.weapon.sheet,
       width: 500,
       height: 400,
       tabs: [
@@ -30,6 +31,7 @@ export class WeaponSheet extends ItemSheet<DocumentSheetOptions<WeaponItem>> {
     const extendedContext = {
       ...data,
       document: this.document,
+      templates: FERPG.templates,
       fields: item.schema.fields,
       system: item.system,
       systemFields: item.system.schema.fields,

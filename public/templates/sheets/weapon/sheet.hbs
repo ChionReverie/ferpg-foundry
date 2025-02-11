@@ -1,0 +1,14 @@
+<form class="{{cssClass}} feRPG-document" autocomplete="off">
+    {{> (feRPG_template 'feRPG:components/item_header') }}
+    <section class="feRPG-content feRPG-weapon_sheet__content">
+        <section class="feRPG-weapon_sheet__sidebar">
+            {{> (feRPG_template 'feRPG:sheets/weapon/summary') }}
+        </section>
+
+        <section class="feRPG-weapon_sheet__main feRPG-pane">
+            {{> (feRPG_template 'feRPG:sheets/weapon/navbar') }}
+            {{> (feRPG_template 'feRPG:sheets/weapon/tab_description') }}
+        </section>
+    </section>
+    {{> (feRPG_template 'feRPG:sheets/weapon/tab_rules') }}
+</form>

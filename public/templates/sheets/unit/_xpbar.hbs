@@ -9,7 +9,7 @@
       {{formInput systemFields.exp.fields.value value=system.exp.value localize=false}}
       <div class="feRPG-decorator feRPG-decorator--sloped_right"></div>
     </div>
-    {{> "systems/fireemblem/templates/components/_meter.hbs"
+    {{> (feRPG_template 'feRPG:components/meter')
       value=system.exp.value
       max=system.exp.max
     }}

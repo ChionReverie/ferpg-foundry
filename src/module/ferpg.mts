@@ -6,6 +6,7 @@ import { UnitSheet } from "./actor/unit/sheet.mjs";
 import { WeaponSheet } from "./item/weapon/sheet.mjs";
 import { FERPG } from "./config.mjs";
 import { WeaponModel } from "./item/weapon/data.mjs";
+import { getTemplateUrl } from "./helper/template.mjs";
 
 Hooks.once("init", () => {
   CONFIG.FERPG = FERPG;
@@ -28,17 +29,20 @@ Hooks.once("init", () => {
     label: "FERPG.sheet.label.weapon",
   });
 
-  const templatePaths = [
-    "systems/fireemblem/templates/components/_meter.hbs",
-    "systems/fireemblem/templates/components/_item_header.hbs",
-    "systems/fireemblem/templates/components/_labeled_stat.hbs",
-    "systems/fireemblem/templates/actor/unit/_header.hbs",
-    "systems/fireemblem/templates/actor/unit/_xpbar.hbs",
-    "systems/fireemblem/templates/actor/unit/_hpbar.hbs",
-    "systems/fireemblem/templates/item/weapon/_summary.hbs",
-    "systems/fireemblem/templates/item/weapon/_tablist.hbs",
-    "systems/fireemblem/templates/item/weapon/_tab_description.hbs",
-    "systems/fireemblem/templates/item/weapon/_tab_rules.hbs",
-  ];
-  loadTemplates(templatePaths);
+  const templates: any[] = [];
+  readTreeToArray(FERPG.templates, templates);
+
+  loadTemplates(templates as string[]);
+
+  Handlebars.registerHelper("feRPG_template", getTemplateUrl);
 });
+
+function readTreeToArray(tree: object, arr: any[]) {
+  Object.values(tree).forEach((branch) => {
+    if (typeof branch !== "object") {
+      arr.push(branch);
+      return;
+    }
+    readTreeToArray(branch, arr);
+  });
+}
