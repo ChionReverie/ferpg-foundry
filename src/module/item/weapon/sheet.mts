@@ -31,7 +31,6 @@ export class WeaponSheet extends ItemSheet<DocumentSheetOptions<WeaponItem>> {
     const extendedContext = {
       ...data,
       document: this.document,
-      templates: FERPG.templates,
       fields: item.schema.fields,
       system: item.system,
       systemFields: item.system.schema.fields,

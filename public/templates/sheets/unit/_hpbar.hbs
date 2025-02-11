@@ -6,7 +6,7 @@
     {{localize "FERPG.sheet.unit.label.hp"}}
   </div>
   <div class="feRPG-hpbar__container">
-    {{> (feRPG_template 'feRPG:components/meter')
+    {{>feRPG:components/meter
       value=system.combat.health.value
       max=system.combat.health.max
     }}

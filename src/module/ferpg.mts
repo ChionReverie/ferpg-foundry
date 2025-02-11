@@ -6,7 +6,7 @@ import { UnitSheet } from "./actor/unit/sheet.mjs";
 import { WeaponSheet } from "./item/weapon/sheet.mjs";
 import { FERPG } from "./config.mjs";
 import { WeaponModel } from "./item/weapon/data.mjs";
-import { getTemplateUrl } from "./helper/template.mjs";
+import { readTablePaths } from "./util.mjs";
 
 Hooks.once("init", () => {
   CONFIG.FERPG = FERPG;
@@ -29,20 +29,9 @@ Hooks.once("init", () => {
     label: "FERPG.sheet.label.weapon",
   });
 
-  const templates: any[] = [];
-  readTreeToArray(FERPG.templates, templates);
-
-  loadTemplates(templates as string[]);
-
-  Handlebars.registerHelper("feRPG_template", getTemplateUrl);
+  const templates: { [key: string]: string } = {};
+  for (const next of readTablePaths("feRPG:", FERPG.templates)) {
+    templates[next.key] = next.value;
+  }
+  loadTemplates(templates);
 });
-
-function readTreeToArray(tree: object, arr: any[]) {
-  Object.values(tree).forEach((branch) => {
-    if (typeof branch !== "object") {
-      arr.push(branch);
-      return;
-    }
-    readTreeToArray(branch, arr);
-  });
-}

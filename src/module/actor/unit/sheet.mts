@@ -19,7 +19,6 @@ export class UnitSheet extends ActorSheet {
     const extendedContext = {
       ...data,
       document: this.document,
-      templates: FERPG.templates,
       fields: actor.schema.fields,
       system: actor.system,
       systemFields: actor.system.schema.fields,

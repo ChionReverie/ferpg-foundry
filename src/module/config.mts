@@ -57,6 +57,7 @@ export const FERPG = {
       unit: {
         sheet: `${templateRoot}/sheets/unit/sheet.hbs`,
         header: `${templateRoot}/sheets/unit/_header.hbs`,
+        navbar: `${templateRoot}/sheets/unit/_navbar.hbs`,
         xpbar: `${templateRoot}/sheets/unit/_xpbar.hbs`,
         hpbar: `${templateRoot}/sheets/unit/_hpbar.hbs`,
       },

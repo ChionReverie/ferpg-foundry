@@ -8,23 +8,23 @@
       <span>Class Name</span> Lv. <span>5</span>
     </span>
     <div class="feRPG-row feRPG-unitheader__statusbars">
-      {{> (feRPG_template 'feRPG:sheets/unit/xpbar') }}
-      {{> (feRPG_template 'feRPG:sheets/unit/hpbar') }}
+      {{>feRPG:sheets/unit/xpbar }}
+      {{>feRPG:sheets/unit/hpbar }}
     </div>
   </div>
   <div class="feRPG-column feRPG-unitheader__sidebar">
 
-    {{> (feRPG_template 'feRPG:components/labeled_stat')
+    {{>feRPG:components/labeled_stat
       label=(localize "FERPG.sheet.unit.label.move") 
       value=system.move.value 
       size="medium" flavor="light" 
     }}
-    {{> (feRPG_template 'feRPG:components/labeled_stat') 
+    {{>feRPG:components/labeled_stat 
       label=(localize "FERPG.sheet.unit.label.constitution") 
       value=system.constitution.value 
       size="medium" flavor="light"
     }}
-    {{> (feRPG_template 'feRPG:components/labeled_stat')
+    {{>feRPG:components/labeled_stat
       label=(localize "FERPG.sheet.unit.label.sight") 
       value=system.sight.value 
       size="medium" flavor="light"
