@@ -1,2 +1,6 @@
+# Build targets
 node_modules/
 dist/
+
+# Editor-specific stuff
+.vscode

@@ -1,11 +1,10 @@
 import dirs from "./dirnames";
 import fs from "fs";
-import { execSync } from "child_process";
+import { execSync, spawn } from "child_process";
 
 import * as sass from "sass";
 import path from "path";
 import * as glob from "glob";
-import { dir } from "console";
 
 const LIBRARY_PATHS = {
   "@yaireo/tagify/dist/tagify.esm.js": "tagify.esm.js",
@@ -20,11 +19,15 @@ const EXTENSION_SOURCE_STYLESHEET = ".scss";
 const EXTENSION_DEST_STYLESHEET = ".css";
 const EXTENSION_DEST_STYLESHEET_MAPS = ".css.map";
 
-export function fullBuild() {
+export function fullBuild(options?: { scriptWatch?: boolean }) {
   copyLibs();
   copyPublic();
   transpileStyles();
-  compileScripts();
+  if (options && options.scriptWatch) {
+    watchScripts();
+  } else {
+    compileScripts();
+  }
 }
 
 export function copyPublic() {
@@ -82,5 +85,10 @@ export function copyLibs() {
 }
 
 export function compileScripts() {
-  execSync("npm run build:script", { stdio: "inherit" });
+  const command = "npm run build:script";
+  execSync(command, { stdio: "inherit" });
 }
+export function watchScripts() {
+  spawn("npm", ["run", "build:script:watch"], { stdio: "inherit" });
+}
+

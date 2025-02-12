@@ -11,7 +11,7 @@ if (FAIL_GRACEFULLY) {
 }
 
 try {
-  operations.fullBuild();
+  operations.fullBuild({ scriptWatch: true });
   console.log("Initial build complete.");
 } catch (e) {
   console.log("Initial build failed.");
@@ -49,19 +49,6 @@ fs.watch(dirs.style.src, { recursive: true }, (eventType, fileName) => {
     console.log("Stylesheets have successfully been replaced.");
   } catch (e) {
     console.error("Failed to replace stylesheets.");
-    console.error(e);
-    maybe_terminate();
-  }
-});
-
-fs.watch(dirs.module.src, { recursive: true }, (eventType, fileName) => {
-  console.log(`Module script edited at ${fileName}`);
-
-  try {
-    operations.compileScripts();
-    console.log("Module scripts have successfully been replaced.");
-  } catch (e) {
-    console.error("Failed to replace module scripts.");
     console.error(e);
     maybe_terminate();
   }

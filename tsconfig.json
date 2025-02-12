@@ -1,5 +1,8 @@
 {
-    "include": ["src/**/*"],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.mts"
+    ],
     "exclude": ["node_modules"],
     "files": [
         "src/module/ferpg.mts"
