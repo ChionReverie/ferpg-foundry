@@ -1,0 +1,45 @@
+.unit {
+  .feRPG-sheetnav {
+    height: 1.25rem;
+    padding-left: var(--feRPG-size-content_padding);
+    gap: var(--feRPG-size-content_gap);
+    background: var(--feRPG-color-nav_bar_bg);
+    color: var(--feRPG-color-nav_bar_text);
+    align-items: center;
+  }
+  .feRPG-sheetnav-tab_name {
+    width: 10rem;
+  }
+  .feRPG-button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-radius: 50%;
+    border-width: 2px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: var(--_button_main);
+      mask-image: var(--_icon);
+      mask-position: 50% 50%;
+      mask-size: 100%;
+    }
+  }
+}
+
+.feRPG-tab_button--icon_overview {
+  --_icon: url("/systems/fireemblem/assets/icons/nav_overview.svg");
+}
+.feRPG-tab_button--icon_advancement {
+  --_icon: url("/systems/fireemblem/assets/icons/nav_advancement.svg");
+}
+.feRPG-tab_button--icon_inventory {
+  --_icon: url("/systems/fireemblem/assets/icons/nav_inventory.svg");
+}
+.feRPG-tab_button--icon_notes {
+  --_icon: url("/systems/fireemblem/assets/icons/nav_notes.svg");
+}

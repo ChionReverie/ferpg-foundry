@@ -1,11 +1,9 @@
 <form class="{{cssClass}} feRPG-document" autocomplete="off">
   {{>feRPG:sheets/unit/header}}
   {{>feRPG:sheets/unit/navbar}}
-  <section class="feRPG-content feRPG-column">
-    <p>(content)</p>
-  </section>
-  {{>feRPG:components/meter
-    value=system.exp.value
-    max=system.exp.max
-  }}
+  {{!-- Tabs --}}
+  {{>feRPG:sheets/unit/tab/overview}}
+  {{>feRPG:sheets/unit/tab/advancement}}
+  {{>feRPG:sheets/unit/tab/inventory}}
+  {{>feRPG:sheets/unit/tab/notes}}
 </form>

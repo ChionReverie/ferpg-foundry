@@ -11,3 +11,11 @@ export function* readTablePaths(
       }
     }
   }
+
+export function findWithinNode(parent: JQuery, selector: string): JQuery {
+  const result = parent.find(selector);
+  if (result.length === 0) {
+    throw new Error(`Expected an element matching selector (${selector})`);
+  }
+  return result;
+}

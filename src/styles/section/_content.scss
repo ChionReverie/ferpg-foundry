@@ -12,6 +12,7 @@
     
     input[type="text"], input[type="number"]
     {
+        padding: calc(2 * 1rem / 16) calc(5 * 1rem / 16);
         height: var(--feRPG-field-height);
         border: none;
         color: var(--feRPG-color-text);

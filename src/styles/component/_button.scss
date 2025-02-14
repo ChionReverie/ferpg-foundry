@@ -1,7 +1,10 @@
 .feRPG-button {
-    border: 1px solid var(--feRPG-color-nav_button-outer);
-    color: var(--feRPG-color-nav_button-outer);
-    background: var(--feRPG-color-nav_button-inner);
+    --_button_bg_color: var(--feRPG-color-nav_button-inner);
+    --_button_main: var(--feRPG-color-nav_button-outer);
+
+    border: 1px solid var(--_button_main);
+    color: var(--_button_main);
+    background: var(--_button_bg_color);
     filter: drop-shadow(black 0 0 4px);
     padding: 
         var(--feRPG-size-button_padding-v)
@@ -10,7 +13,6 @@
     border-radius: var(--feRPG-field-corner_radius);
 }
 .feRPG-button.active {
-    border: 1px solid var(--feRPG-color-nav_button-outer_checked);
-    color: var(--feRPG-color-nav_button-outer_checked);
-    background: var(--feRPG-color-nav_button-inner_checked);
+    --_button_bg_color: var(--feRPG-color-nav_button-inner_checked);
+    --_button_main: var(--feRPG-color-nav_button-outer_checked);
 }

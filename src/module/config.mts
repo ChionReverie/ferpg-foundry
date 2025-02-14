@@ -60,6 +60,12 @@ export const FERPG = {
         navbar: `${templateRoot}/sheets/unit/_navbar.hbs`,
         xpbar: `${templateRoot}/sheets/unit/_xpbar.hbs`,
         hpbar: `${templateRoot}/sheets/unit/_hpbar.hbs`,
+        tab: {
+          overview: `${templateRoot}/sheets/unit/tab/_overview.hbs`,
+          advancement: `${templateRoot}/sheets/unit/tab/_advancement.hbs`,
+          inventory: `${templateRoot}/sheets/unit/tab/_inventory.hbs`,
+          notes: `${templateRoot}/sheets/unit/tab/_notes.hbs`,
+        },
       },
     },
   },

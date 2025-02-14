@@ -26,6 +26,12 @@
       }
     },
     "sheet.unit": {
+      "tab": {
+        "overview": "Overview",
+        "advancement": "Advancement",
+        "inventory": "Inventory",
+        "notes": "Notes"
+      },
       "label": {
         "exp": "EXP",
         "hp": "HP",
