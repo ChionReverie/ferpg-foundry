@@ -28,6 +28,9 @@
     "Item": {
       "weapon": {
         "htmlFields": ["description"]
+      },
+      "class": {
+        "htmlFields": ["description"]
       }
     }
   },

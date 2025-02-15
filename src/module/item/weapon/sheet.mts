@@ -9,7 +9,7 @@ export class WeaponSheet extends ItemSheet<DocumentSheetOptions<WeaponItem>> {
 
   static get defaultOptions() {
     return foundry.utils.mergeObject(ItemSheet.defaultOptions, {
-      classes: ["feRPG", "sheet", "weapon", "item"],
+      classes: ["feRPG", "feRPG-weapon_sheet", "sheet", "item"],
       template: FERPG.templates.sheets.weapon.sheet,
       width: 500,
       height: 400,
@@ -23,7 +23,9 @@ export class WeaponSheet extends ItemSheet<DocumentSheetOptions<WeaponItem>> {
     });
   }
 
-  override async getData(options: any) {
+  override async getData(
+    options?: Partial<DocumentSheetOptions<WeaponItem>> | undefined
+  ) {
     const data = await super.getData(options);
 
     const item = this.item as WeaponItem;

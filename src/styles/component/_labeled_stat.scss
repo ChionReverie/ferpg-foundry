@@ -16,7 +16,7 @@
     --_labeled_stat-label_font: var(--feRPG-font-common-large);
     --_labeled_stat-field_font: var(--feRPG-font-numbers-large);
     --_labeled_stat-height: 2.5rem;
-    --_labeled_stat-field_width: 4rem;
+    --_labeled_stat-field_width: 3rem;
 }
 
 .feRPG-labeled_stat--flavor_light {
@@ -37,6 +37,7 @@
 
 .feRPG-labeled_stat__label  {
     font: var(--_labeled_stat-label_font);
+    color: var(--_labeled_stat-field_bg);
     flex: 1;
     text-align: center;
     align-content: space-around;
@@ -51,4 +52,10 @@
     width: var(--_labeled_stat-field_width);
     background: var(--_labeled_stat-field_bg);
     color: var(--_labeled_stat-field_color);
+
+    input[type] {
+        width: 100%;
+        height: 100%;
+        background: none;
+    }
 }

@@ -5,7 +5,7 @@ import { UnitActor } from "./document.mjs";
 export class UnitSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(ActorSheet.defaultOptions, {
-      classes: ["feRPG", "sheet", "unit"],
+      classes: ["feRPG", "feRPG-unit_sheet", "sheet"],
       template: FERPG.templates.sheets.unit.sheet,
       width: 500,
       height: 600,

@@ -1,0 +1,96 @@
+<form class="{{cssClass}} feRPG-document" autocomplete="off">
+  {{>feRPG:components/item_header 
+    nameField=fields.name 
+    value=document.name 
+    itemType="FERPG.sheet.itemType.class"
+  }}
+  <section class="feRPG-content">
+    <div class="feRPG-lore">
+      {{editor enrichedContent.description 
+        target="system.description" 
+        button=true owner=owner 
+        editable=editable 
+        engine="prosemirror"
+      }}
+    </div>
+    <div class="feRPG-class_sheet__row">
+      <div class="feRPG-class_sheet__stats">
+        <div class="feRPG-class_sheet__stats__col">
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.health") 
+            field=systemFields.combat.fields.health
+            value=system.combat.health
+            size="large" flavor="light" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.strength") 
+            field=systemFields.combat.fields.strength
+            value=system.combat.strength 
+            size="large" flavor="light" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.magic")
+            field=systemFields.combat.fields.magic 
+            value=system.combat.magic
+            size="large" flavor="light" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.defense") 
+            field=systemFields.combat.fields.defense
+            value=system.combat.defense 
+            size="large" flavor="light" 
+          }}
+        </div>
+        <div class="feRPG-class_sheet__stats__col">  
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.resistance")
+            field=systemFields.combat.fields.resistance 
+            value=system.combat.resistance
+            size="large" flavor="light" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.skill") 
+            field=systemFields.combat.fields.skill
+            value=system.combat.skill 
+            size="large" flavor="light" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.speed") 
+            field=systemFields.combat.fields.speed
+            value=system.combat.speed
+            size="large" flavor="light" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.luck") 
+            field=systemFields.combat.fields.luck
+            value=system.combat.luck
+            size="large" flavor="light" 
+          }}
+        </div>
+        <div class="feRPG-class_sheet_stats_row">
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.constitution")
+            field=systemFields.constitution 
+            value=system.constitution
+            size="medium" flavor="medium" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.move")
+            field=systemFields.move 
+            value=system.move
+            size="medium" flavor="medium" 
+          }}
+          {{>feRPG:components/labeled_stat
+            label=(localize "FERPG.stats.sight")
+            field=systemFields.sight 
+            value=system.sight
+            size="medium" flavor="medium" 
+          }}
+        </div>
+      </div>
+      <div class="feRPG-class_sheet-details">
+        <p>Details</p>
+      </div>
+    </div>
+  </section>
+</form>

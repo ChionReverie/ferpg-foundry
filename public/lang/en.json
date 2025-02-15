@@ -2,7 +2,12 @@
   "FERPG": {
     "sheet.label": {
       "weapon": "Weapon Sheet",
-      "unit": "Unit Sheet"
+      "unit": "Unit Sheet",
+      "class": "Class Sheet"
+    },
+    "sheet.itemType": {
+      "weapon": "Weapon",
+      "class": "Class"
     },
     "sheet.weapon": {
       "tab": {
@@ -34,11 +39,22 @@
       },
       "label": {
         "exp": "EXP",
-        "hp": "HP",
-        "move": "Mov",
-        "constitution": "Con",
-        "sight": "LoS"
+        "hp": "HP"
       }
+    },
+
+    "stats": {
+      "move": "Mov",
+      "constitution": "Con",
+      "sight": "LoS",
+      "health": "HP",
+      "strength": "Str",
+      "magic": "Mag",
+      "defense": "Def",
+      "resistance": "Res",
+      "skill": "Skl",
+      "speed": "Spd",
+      "luck": "Luk"
     },
 
     "weaponCategory": {

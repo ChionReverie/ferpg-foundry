@@ -67,6 +67,9 @@ export const FERPG = {
           notes: `${templateRoot}/sheets/unit/tab/_notes.hbs`,
         },
       },
+      class: {
+        sheet: `${templateRoot}/sheets/class/sheet.hbs`,
+      },
     },
   },
 };

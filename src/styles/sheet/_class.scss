@@ -1,0 +1,54 @@
+.feRPG-class_sheet {
+  .window-content {
+    /* Overrides */
+    padding: 0;
+  }
+
+  .feRPG-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feRPG-class_sheet__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.feRPG-class_sheet__stats {
+  flex: 0 16rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: calc(8 * 1rem / 16);
+  flex-wrap: wrap;
+}
+.feRPG-class_sheet__stats__col {
+  flex: 0 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: calc(1 * 1rem / 16);
+  border-radius: var(--feRPG-pane-corner_radius);
+  overflow: hidden;
+  background-color: var(--feRPG-color-gold_dark);
+}
+
+.feRPG-class_sheet_stats_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 0 100%;
+
+  .feRPG-labeled_stat {
+    border-radius: var(--feRPG-pane-corner_radius);
+    overflow: hidden;
+    width: 5rem;
+  }
+}
+
+.feRPG-class_sheet__details {
+  flex: 1;
+  border: 1px solid var(--feRPG-color-text);
+  background: var(--feRPG-color-card_light);
+  color: var(--feRPG-color-text)
+}

@@ -1,4 +1,9 @@
-.unit {
+.feRPG-unit_sheet {
+  .window-content {
+      /* Overrides */
+      padding: 0;
+  }
+  
   .feRPG-sheetnav {
     height: 1.25rem;
     padding-left: var(--feRPG-size-content_padding);

@@ -1,14 +1,19 @@
 <form class="{{cssClass}} feRPG-document" autocomplete="off">
-    {{>feRPG:components/item_header}}
-    <section class="feRPG-content feRPG-weapon_sheet__content">
-        <section class="feRPG-weapon_sheet__sidebar">
-            {{>feRPG:sheets/weapon/summary}}
-        </section>
-
-        <section class="feRPG-weapon_sheet__main feRPG-pane">
-            {{>feRPG:sheets/weapon/navbar}}
-            {{>feRPG:sheets/weapon/tab_description}}
-        </section>
+  <form class="{{cssClass}} feRPG-document" autocomplete="off">
+    {{>feRPG:components/item_header 
+      nameField=fields.name 
+      value=document.name 
+      itemType="FERPG.sheet.itemType.weapon"
+    }}
+  <section class="feRPG-content feRPG-weapon_sheet__content">
+    <section class="feRPG-weapon_sheet__sidebar">
+      {{>feRPG:sheets/weapon/summary}}
     </section>
-    {{>feRPG:sheets/weapon/tab_rules }}
+
+    <section class="feRPG-weapon_sheet__main feRPG-pane">
+      {{>feRPG:sheets/weapon/navbar}}
+      {{>feRPG:sheets/weapon/tab_description}}
+    </section>
+  </section>
+  {{>feRPG:sheets/weapon/tab_rules }}
 </form>

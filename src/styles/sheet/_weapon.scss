@@ -1,4 +1,11 @@
 .feRPG-weapon_sheet {
+    .window-content {
+        /* Overrides */
+        padding: 0;
+    }
+}
+
+.feRPG-weapon_sheet__content {
     display: flex;
     flex-direction: row;
 }

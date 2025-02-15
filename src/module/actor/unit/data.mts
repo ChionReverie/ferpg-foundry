@@ -42,7 +42,7 @@ export interface UnitData {
     strength: CombatStat;
     magic: CombatStat;
     defense: CombatStat;
-    resistane: CombatStat;
+    resistance: CombatStat;
     skill: CombatStat;
     speed: CombatStat;
     luck: CombatStat;
